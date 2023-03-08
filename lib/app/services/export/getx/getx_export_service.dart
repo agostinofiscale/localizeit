@@ -37,7 +37,7 @@ class GetExportService implements IExportService {
 
         if (matches.isNotEmpty) {
           for (var match in matches) {
-            if (match.group(2) == ".tr") {
+            if (match.group(2) == ".tr" && !keys.contains(match.group(1)!)) {
               keys.add(
                 match.group(1)!
               );
