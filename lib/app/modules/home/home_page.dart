@@ -15,13 +15,13 @@ class HomePage extends GetView {
     return Scaffold(
       appBar: AppBar(
         title: const Text("LocalizeIt"),
-        actions: [
+        /* actions: [
           IconButton(
               onPressed: () {
                 Get.toNamed("/settings");
               },
               icon: const Icon(Icons.settings))
-        ],
+        ], */
       ),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () => homeController.addNewKey(),
@@ -36,10 +36,10 @@ class HomePage extends GetView {
                 children: [
                   DropdownButton(value: "get", onChanged: (v) {}, items: const [
                     DropdownMenuItem(value: "get", child: Text("GetX")),
-                    DropdownMenuItem(
+                   /*  DropdownMenuItem(
                         value: "flutter_i18n", child: Text("Flutter_i18n")),
                     DropdownMenuItem(
-                        value: "flutter_easy_localization", child: Text("Easy localization")),
+                        value: "flutter_easy_localization", child: Text("Easy localization")), */
                   ]),
                   ElevatedButton(
                       onPressed: () => homeController.importProject(context),
@@ -47,14 +47,14 @@ class HomePage extends GetView {
                   ElevatedButton(
                       onPressed: () => homeController.export(context),
                       child: Text("home_page_export".tr)),
-                  SizedBox(
+                 /*  SizedBox(
                     width: 300,
                     child: CheckboxListTile(
                       value: true,
                       onChanged: (v) {},
                       title: Text("home_page_add_export_empty_strings".tr),
                     ),
-                  ),
+                  ), */
                   const Spacer(),
                   ElevatedButton(
                       onPressed: () =>
